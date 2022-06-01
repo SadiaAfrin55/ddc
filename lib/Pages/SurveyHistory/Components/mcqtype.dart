@@ -20,10 +20,10 @@ class McqTypePage extends StatelessWidget {
                 fontWeight: FontWeight.w600,
                 color: Color(0xFF232C2E),
               ),),
-              const SizedBox(height: 16,),
               Column(
                 children: options!.map((e) => Container(
                   height: 46,
+                  margin: const EdgeInsets.only(top: 12),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(8),
                     color: const Color(0xFFF7F8F8),
@@ -31,7 +31,7 @@ class McqTypePage extends StatelessWidget {
                   child: Row(
                     children: [
                       Radio(
-                          value: 1,
+                          value: true,
                           groupValue: e==givenAnswer,
                           onChanged: (val){}
                       ),

@@ -17,7 +17,7 @@ class TextFieldtypePage extends StatelessWidget {
             fontWeight: FontWeight.w600,
             color: Color(0xFF232C2E),
           ),),
-          const SizedBox(height: 16,),
+          const SizedBox(height: 10,),
           Container(
             padding: const EdgeInsets.all(16),
             height: 116,

@@ -16,6 +16,7 @@ class _SurveyHistoryDetailsState extends State<SurveyHistoryDetails> {
   List <checkModel> quslist=[];
   final qusModel = [
     checkModel('mcq qus', 'Yes', true, ["Yes","No","yreee","yyy"]),
+    checkModel('mcq qus', 'jit', true, ["sadia","sifat","jit","kaiser"]),
     checkModel('textfield', 'randomised words which dont look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isnt anything.', false, ["Yes","No"]),
 
     checkModel('mcq qus', 'No', true, ["Yes","No"]),
@@ -45,13 +46,16 @@ class _SurveyHistoryDetailsState extends State<SurveyHistoryDetails> {
                 child: const Icon(Icons.arrow_back,color: Colors.black,)),
           ),
           body: SingleChildScrollView(
+            physics: ScrollPhysics(),
             child: Container(
               margin: const EdgeInsets.all(16),
               child: Column(
+
                 children: [
                  ListView.builder(
                    shrinkWrap: true,
                    scrollDirection: Axis.vertical,
+                     physics: const NeverScrollableScrollPhysics(),
                    itemCount: qusModel.length,
                      itemBuilder: (context,index){
                        return Column(
