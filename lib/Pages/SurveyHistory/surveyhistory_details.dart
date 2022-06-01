@@ -59,10 +59,8 @@ class _SurveyHistoryDetailsState extends State<SurveyHistoryDetails> {
                            qusModel[index].checkBoxtype==true?
                            McqTypePage(
                              qus: qusModel[index].title,
-                             optionsOne: qusModel[index].options[0],
-                             optionsTwo: qusModel[index].options[1],
-                             ansClicked: qusModel[index].options[0]==qusModel[index].givenans?
-                             qusModel[index].givenans:qusModel[index].options[1],
+                             options: qusModel[index].options,
+                             givenAnswer:qusModel[index].givenans
                            ):Container(),
 
                            qusModel[index].checkBoxtype==false?TextFieldtypePage(
